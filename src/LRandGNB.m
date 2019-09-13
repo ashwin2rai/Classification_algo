@@ -20,8 +20,10 @@ hold on;
 
 
 %loading dataset: may have to change directories
+%unix('cp dat/data_bn* src/')
 load data_bn;
-%data_bn=importdata('iris.data');
+%unix('rm data_bn*')
+%data_bn=importdata('insert_filename_here');
 
 tra=0;
 temp_var=find(data_bn(:,5)==1
