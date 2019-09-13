@@ -29,6 +29,7 @@ tra=0;
 temp_var=find(data_bn(:,5)==1
 data_bn(temp_var),1)= data_bn(find(temp_var),1) + tra;
 ctr=0;
+clearvars temp_var;
 
 %Initial weights
 w = [ 0.1 0.1 0.1 0.1 0.1]';
