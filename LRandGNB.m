@@ -2,6 +2,23 @@
 clear; clc;
 hold on;
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% This code compares Gaussin Naiive Bayes and 
+% Logistic Regression classifiers for a dataset
+% with 4 features and 1 class label performing
+% binary classification. The code uses vectorization
+% and broadcasting where possible to speed up 
+% the algorithms and uses gradient descent for 
+% weight optimzation in the case of Logistic 
+% Regression. 
+%
+% The code trains the classifiers with different
+% proportions of the total data to show underfitting
+% and overfitting and biased predictions. 
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 %loading dataset: may have to change directories
 load data_bn;
 %data_bn=importdata('iris.data');
@@ -154,6 +171,7 @@ for newvar = 1:length(training_data_per_v)
 	%finding accuracy metrics
         error_lr(ctr)=sum( predict_vec ~= testing_set(:,5))...
             /length(testing_set);
+	%%
     end
 end
 toc;
